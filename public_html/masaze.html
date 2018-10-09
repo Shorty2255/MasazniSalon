@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Masáže | Ceník - FIRMA</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">ÚVOD</a>
+                <a href="masaze.html" class="active">MASÁŽE A CENÍK</a>
+                <a href="galerie.html">GALERIE</a>
+                <a href="rezervace.html">REZERVACE</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Slideshow -->
+            <div class="display-container">
+                <div class="fade">
+                    <img alt="Náš kvalifikovaný personál" src="Slide2.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Kvalifikovaný personál
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Velký výběr služeb" src="Slide3.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Velký výběr
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Poskytujem nejlepší služby" src="Slide4.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Řada ocenění
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="U nás jste jako doma" src="Slide1.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Příjemné prostředí
+                    </div>
+                </div>
+            </div>           
+            <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("fade");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 10000);    
+            }
+            </script>
+            
+            <section>
+                <h1>Ceník</h1>
+                <table>
+                    <tr>
+                        <th>Druh masáže</th>
+                        <th>60 min</th>
+                        <th>90 min</th>
+                        <th>120 min</th>
+                    </tr>
+                    <tr>
+                        <td>OLEJOVÁ masáž</td>
+                        <td>1.900 Kč / 75 €</td>
+                        <td>2.600 Kč / 105 €</td>
+                        <td>3.500 Kč / 140 €</td>
+                    </tr>
+                    <tr>
+                        <td>Masáž HLAVY</td>
+                        <td>500 Kč / 20 €</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Masáž CHODIDEL</td>
+                        <td>500 Kč / 20 €</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Další masáž #1</td>
+                        <td>1.900 Kč / 75 €</td>
+                        <td>-</td>
+                        <td>5.000 Kč / 200 €</td>
+                    </tr>
+                    <tr>
+                        <td>Další masáž #2</td>
+                        <td>-</td>
+                        <td>2.600 Kč / 105 €</td>
+                        <td>3.500 Kč / 140 €</td>
+                    </tr>
+                </table>
+            </section>
+            
+            
+            
+            <section>
+                <h2>Etiketa</h2>
+                <p>Každá z našich masérek má ráda svojí práci a přináší relaxaci a radost svému klientovi. Proto zde uvádíme některá pravidla chování, které Vás prosíme dodržujte před i během návštěvy.</p>
+                    
+                <p>Nejprve bychom rádi připomněli, že <mark>neposkytujeme sexuální služby</mark>. Pánové, chovejte se jako džentlmeni. Každá žena takové chování ocení a stejně tak naše masérky. Chovejte se k masérkám slušně a bude o Vás postaráno ještě lépe. Pokud si nejste něčím jisti, máte jakoukoliv otázku, prosím zeptejte se naší recepce nebo nás kontaktujte na našem telefonním čísle nebo emailem.</p>
+                    
+                <p>Na masáž přijďte připraveni: udělejte si na návštěvu čas, neposilňujte se alkoholem nebo jinými prostředky, které by mohly negativně ovlivnit výsledek masáže. Stejně jako Vy si chcete naplno vychutnat masážní rituál, tak stejně Vám masérka chce předvést své nejlepší profesionální dovednosti.</p>
+                <mark>Děkujeme. Tým <i>NÁZEV FIRMY</i></mark>
+                
+            </section>
+        </main>
+        <footer>
+            <p>Jedná se o studentský projekt! Všechna data jsou smyšlena, a jejich podoba s realitou je zcela náhodná.</p>
+        </footer>
+    </body>
+</html>

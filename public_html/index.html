@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Úvod - FIRMA</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="active">ÚVOD</a>
+                <a href="masaze.html">MASÁŽE A CENÍK</a>
+                <a href="galerie.html">GALERIE</a>
+                <a href="rezervace.html">REZERVACE</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Slideshow -->
+            <div class="display-container">
+                <div class="fade">
+                    <img alt="U nás jste jako doma" src="Slide1.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Příjemné prostředí
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Náš kvalifikovaný personál" src="Slide2.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Kvalifikovaný personál
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Velký výběr služeb" src="Slide3.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Velký výběr
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Poskytujem nejlepší služby" src="Slide4.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Řada ocenění
+                    </div>
+                </div>
+            </div>       
+            <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("fade");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 5000);    
+            }
+            </script>
+            
+            <div class="parent">
+                <section class="child" style="order:1; width: 35rem">
+                    <h1>O nás</h1>
+                    <p>
+                        Naše masážní studio vzniklo za účelem rozšíření nabídky služeb v ČR. Pokud máte bolesti zad, potřebujete si odpočinout, 
+                        nechat Vaše tělo relaxovat, nikdy jste nezkusili žádnou masáž a jste zvědaví, jak to v masážním salonu vypadá, nebo jen 
+                        chcete obdarovat přátelé malým dárkem v podobě poukázky na masáž, nebojte se a navštivte naše studio.
+                    </p>
+                    <p>
+                        Jak nás kontaktovat zjistíte na stránce <a href="kontakt.html" title="Kontaktní informace firmy">KONTAKT</a>
+                    </p>
+                </section>
+                <section class="child" style="order:2">
+                    <h2><mark>Proč právě k nám?</mark></h2>
+                    <ul>
+                        <li>relaxační masáže celého těla, které Vám poskytnou skvělé uvolnění</li>
+                        <li>zkušené masérky, které naslouchají Vašim přáním</li>
+                        <li>luxusní diskrétní prostředí</li>
+                        <li>časová flexibilita podle Vašich potřeb</li>
+                        <li>dobrá dostupnost ze všech stran města, možnost parkování</li>
+                        <li>věrnostní programy pro stálé zákazníky</li>
+                    </ul>
+                </section>
+                <section class="child" style="order:3">
+                    <h1>...</h1>
+                    <p>
+                        Ke každé masáži přistupujeme individuálně. Před samotnou masáží se snažíme zjistit o jaký typ masáže byste měli zájem, 
+                        jestli je Vámi vybraná masáž pro Vás vhodná, informujeme Vás o tom jak daná masáž probíhá, na jaké svaly se zaměřuje, 
+                        jestli pro Vás není vhodnější trochu jiná kombinace apod.. Aby masáž měla přesně takové účinky, které očekáváte, je třeba 
+                        věnovat pozornost i Vašemu zdravotnímu stavu, protože ne vždy je možné masáž na Vašem těle provádět. Po výběru masáže se 
+                        již můžete oddávat krásnému odpočinku a v klidu relaxovat.
+                    </p>
+                    <p>
+                        <mark>Těšíme se na Vaši návštěvu.</mark>
+                    </p> 
+                </section>
+            </div>
+        </main>
+        <footer class="sticky_bot">
+            <p>Jedná se o studentský projekt! Všechna data jsou smyšlena, a jejich podoba s realitou je zcela náhodná.</p>
+        </footer>
+    </body>
+</html>

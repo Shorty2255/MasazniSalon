@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Galerie - FIRMA</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">ÚVOD</a>
+                <a href="masaze.html">MASÁŽE A CENÍK</a>
+                <a href="galerie.html" class="active">GALERIE</a>
+                <a href="rezervace.html">REZERVACE</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Slideshow -->
+            <div class="display-container">
+                <div class="fade">
+                    <img alt="Velký výběr služeb" src="Slide3.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Velký výběr
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Poskytujem nejlepší služby" src="Slide4.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Řada ocenění
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="U nás jste jako doma" src="Slide1.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Příjemné prostředí
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Náš kvalifikovaný personál" src="Slide2.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Kvalifikovaný personál
+                    </div>
+                </div>
+            </div>
+            <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("fade");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                
+                setTimeout(carousel, 10000);    
+            }
+            </script>
+            
+            <!-- Obrázková galerie -->
+            <div class="parent gallery">
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(1)" src="img1.jpg" alt="Masážní místnost číslo 1">
+                    <figcaption>Místnost #1</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(2)" src="img2.jpg" alt="Masážní místnost číslo 2">
+                    <figcaption>Místnost #2</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(3)" src="img3.jpg" alt="Masážní místnost číslo 3">
+                    <figcaption>Místnost #3</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(4)" src="img4.jpg" alt="Masážní místnost číslo 4">
+                    <figcaption>Místnost #4</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(1)" src="img1.jpg" alt="Masážní místnost číslo 1">
+                    <figcaption>Místnost #1</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(2)" src="img2.jpg" alt="Masážní místnost číslo 2">
+                    <figcaption>Místnost #2</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(3)" src="img3.jpg" alt="Masážní místnost číslo 3">
+                    <figcaption>Místnost #3</figcaption>
+                </figure>
+                <figure>
+                    <img class="child img-galerie hover-trans"  onclick="openModal();currentSlide(4)" src="img4.jpg" alt="Masážní místnost číslo 4">
+                    <figcaption>Místnost #4</figcaption>
+                </figure>
+            </div>
+            
+            <!-- Modal na zoom obrázků -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="img_modal">
+                      <div class="numbertext">1 / 8</div>
+                      <img alt="Masážní místnost číslo 1" src="img1.jpg">
+                    </div>
+
+                    <div class="img_modal">
+                      <div class="numbertext">2 / 8</div>
+                      <img alt="Masážní místnost číslo 2" src="img2.jpg" >
+                    </div>
+
+                    <div class="img_modal">
+                      <div class="numbertext">3 / 8</div>
+                      <img alt="Masážní místnost číslo 3" src="img3.jpg">
+                    </div>
+
+                    <div class="img_modal">
+                      <div class="numbertext">4 / 8</div>
+                      <img alt="Masážní místnost číslo 4" src="img4.jpg">
+                    </div>
+                    
+                    <div class="img_modal">
+                      <div class="numbertext">5 / 8</div>
+                      <img alt="Masážní místnost číslo 1" src="img1.jpg">
+                    </div>
+                    
+                    <div class="img_modal">
+                      <div class="numbertext">6 / 8</div>
+                      <img alt="Masážní místnost číslo 2" src="img2.jpg" >
+                    </div>
+
+                    <div class="img_modal">
+                      <div class="numbertext">7 / 8</div>
+                      <img alt="Masážní místnost číslo 3" src="img3.jpg">
+                    </div>
+
+                    <div class="img_modal">
+                      <div class="numbertext">8 / 8</div>
+                      <img alt="Masážní místnost číslo 4" src="img4.jpg">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                    <div class="nahled">
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 1" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                        </div>
+
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 2" src="img2.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+                        </div>
+
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 3" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                        </div>
+
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 4" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                        </div>
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 1" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                        </div>
+
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 2" src="img2.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+                        </div>
+
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 3" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                        </div>
+
+                        <div>
+                            <img class="demo" alt="Náhled místnosti číslo 4" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Script na Modal -->
+            <script>
+            function openModal() {
+              document.getElementById('myModal').style.display = "block";
+            }
+
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("img_modal");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+        
+        </main>
+        <footer>
+            <p>Jedná se o studentský projekt! Všechna data jsou smyšlena, a jejich podoba s realitou je zcela náhodná.</p>
+        </footer>
+    </body>
+</html>

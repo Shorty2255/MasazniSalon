@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Rezervace - FIRMA</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">ÚVOD</a>
+                <a href="masaze.html">MASÁŽE A CENÍK</a>
+                <a href="galerie.html">GALERIE</a>
+                <a href="rezervace.html"  class="active">REZERVACE</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Slideshow -->
+            <div class="display-container">
+                <div class="fade">
+                    <img alt="Poskytujem nejlepší služby" src="Slide4.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Řada ocenění
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="U nás jste jako doma" src="Slide1.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Příjemné prostředí
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Náš kvalifikovaný personál" src="Slide2.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Kvalifikovaný personál
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Velký výběr služeb" src="Slide3.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Velký výběr
+                    </div>
+                </div>
+            </div>          
+            <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("fade");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 10000);    
+            }
+            </script>
+
+            
+            <section>
+                <h1>Rezervace</h1>
+                <form action="index.html" method="post">
+                    <label>Vaše jméno</label>
+                        <input type="text" name="predmet" placeholder="..." required>
+                    <label>Požadovaný den</label>
+                        <input type="date" name="date" placeholder="..." required>
+                    <label>Požadovaný čas</label>
+                        <input type="time" name="time" placeholder="..." required>
+                    <label>Kontaktní email</label>
+                        <input type="email" name="email" placeholder="@" required>
+                    <label>Doplňující informace</label>
+                        <textarea name="info" placeholder="Text vaší zprávy..." rows="5"></textarea>
+                    <input type="submit" value="Odeslat">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Jedná se o studentský projekt! Všechna data jsou smyšlena, a jejich podoba s realitou je zcela náhodná.</p>
+        </footer>
+    </body>
+</html>

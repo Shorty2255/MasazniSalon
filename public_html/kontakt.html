@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Kontakt - FIRMA</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">ÚVOD</a>
+                <a href="masaze.html">MASÁŽE A CENÍK</a>
+                <a href="galerie.html">GALERIE</a>
+                <a href="rezervace.html">REZERVACE</a>
+                <a href="kontakt.html"  class="active">KONTAKT</a>
+            </nav>
+        </header>        
+        <main>
+            <!-- Slideshow -->
+            <div class="display-container">
+                <div class="fade">
+                    <img alt="U nás jste jako doma" src="Slide1.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Příjemné prostředí
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Náš kvalifikovaný personál" src="Slide2.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Kvalifikovaný personál
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Velký výběr služeb" src="Slide3.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Velký výběr
+                    </div>
+                </div>
+                <div class="fade">
+                    <img alt="Poskytujem nejlepší služby" src="Slide4.png" style="width:100%">
+                    <div class="display-bottomleft popisek">
+                        MASSAGE<br>Řada ocenění
+                    </div>
+                </div>
+            </div>          
+            <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("fade");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 10000);    
+            }
+            </script>
+            
+            <div class="parent">
+            <section class="child">
+                <h1>Kontakt</h1>
+                <p class="child" style="order:1">
+                    Kontaktujte nás na telefoním čísle <mark>607 345 646</mark>, zašlete <mark>email</mark>, nebo se přijďě informovat <mark>přímo k nám!</mark>
+                </p>
+                <p>
+                    Odpovědný pracovník: ten a ten tamten
+                </p>
+            </section>
+            <section class="child">
+                <h2>Kde nás najdete?</h2>
+                <p class="center child" style="order:2">
+                    <mark>MASSAGE PRAHA</mark><br>
+                    Dejvická 15/36<br>
+                    160 00 Praha 6 - Dejvice<br>
+                </p>
+
+                <p class="center child" style="order:3">
+                    <mark>Otevírací doba:</mark><br>
+                    po - ne: 11:00 - 20:30 hod.
+
+                </p>
+                <div id="map" style="width:100%;height:250px;background:yellow"></div>
+            </section>
+                <section class="child">
+                    <h2>Napište nám!</h2>
+                    <form action="index.html" method="post">
+                        <label>Vaše jméno</label><input type="text" name="predmet" placeholder="..." required>
+                        <label>Kontaktní email</label><input type="email" name="email" placeholder="@" required>
+                        <label>Dotaz:</label>
+                        <textarea name="email" placeholder="Text vaší zprávy..." rows="5"></textarea>
+                        <input type="submit" value="Odeslat">
+                    </form>
+
+
+
+                <!-- Mapa -->
+                
+                
+
+                <script>
+                    function myMap() {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(50.1007449, 14.3954811),
+                        zoom: 15,
+                        mapTypeId: google.maps.MapTypeId.HYBRID
+                    }
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    }
+                </script>
+
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt-XZuqYE-Z_dqdHVQft9mlw4lY0ONo8s&callback=myMap"></script>
+                
+                <!-- konec kodu s Mapou -->
+
+
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>Jedná se o studentský projekt! Všechna data jsou smyšlena, a jejich podoba s realitou je zcela náhodná.</p>
+        </footer>
+    </body>
+</html>

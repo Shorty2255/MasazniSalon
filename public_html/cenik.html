@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>Ceník - FIRMA</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">ÚVOD</a>
+                <a href="masaze.html">MASÁŽE</a>
+                <a href="cenik.html" class="active">CENÍK</a>
+                <a href="galerie.html">GALERIE</a>
+                <a href="rezervace.html">REZERVACE</a>
+                <a href="kontakt.html">ETIKETA</a>
+            </nav>
+        </header>
+        <main>
+            <a href="index.html"><div class="logo"></div></a>
+                        <!-- Obrázková prezentace -->
+            <div class="display-container fade mySlides">
+                <img src="https://www.musamassage.cz/img/slides/1c.jpg" style="width:100%">
+                <div class="display-bottomleft popisek">
+                    MASSAGE<br>... oáza života
+                </div>
+            </div>
+            <div class="display-container fade mySlides">
+                <img src="https://www.musamassage.cz/img/slides/7c.jpg" style="width:100%">
+                <div class="display-bottomleft popisek">
+                    MASSAGE<br>... oáza života
+                </div>
+            </div>
+            <div class="display-container fade mySlides">
+                <img src="https://www.musamassage.cz/img/slides/5c.jpg" style="width:100%">
+                <div class="display-bottomleft popisek">
+                    MASSAGE<br>... oáza života
+                </div>
+            </div>
+            <div class="display-container fade mySlides">
+                <img src="https://www.musamassage.cz/img/slides/3c.jpg" style="width:100%">
+                <div class="display-bottomleft popisek">
+                    MASSAGE<br>... oáza života
+                </div>
+            </div>          
+            <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 10000);    
+            }
+            </script>
+            <!-- Zde končí obrázková prezentace -->
+        </main>
+        <footer>
+            <p>Jedná se o studentský projekt! Všechna data jsou smyšlena, a jejich podoba s realitou je zcela náhodná.</p>
+        </footer>
+    </body>
+</html>
